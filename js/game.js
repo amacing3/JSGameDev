@@ -24,7 +24,6 @@ mainPlayer.messenger(phrases[i]);
 }
 
 function playGame(firstNum, secondNum) {
-    alert(firstNum + secondNum);
     return firstNum + secondNum;
 }
 
