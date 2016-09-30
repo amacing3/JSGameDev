@@ -1,15 +1,29 @@
-var button = document.getElementById("button1");
-
-var myFunction = function () {
-    alert("Hello World");
+//userName button
+var userName;
+var button = document.getElementById("name");
+var enterName = function () {
+    userName = prompt("Enter your name.");
 }
+button.addEventListener ("click", enterName);
 
-button.addEventListener ("click", myFunction);
-
+//startGame button
 var startButton = document.getElementById("startGame");
-
 var startGameHandler = function startMyGame() {
-    prompt("Enter your name.");
+    if(userName == undefined){
+        alert("Please enter a valid name.");
+    } else {
+        alert("Ready to play.");
+    }
+}
+startButton.addEventListener("click", startGameHandler);
+
+var gameButton = function gameButtonConstruct() {
+    var button;
+    var fire = function fireWeaponHandler() {
+        alert("Fire");
+    }
 }
 
-startButton.addEventListener("click", startGameHandler);
+var fireWeaponButton = new gameButton();
+fireWeaponButton.button = document.getElementById("fireWeapon");
+fireWeaponButton.button.addEventListener('click', fireWeaponButton.fire);
